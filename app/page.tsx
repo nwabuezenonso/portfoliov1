@@ -60,28 +60,28 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
         <header
           id="intro"
-          ref={(el) => (sectionsRef.current[0] = el)}
+          ref={(el) => {
+            sectionsRef.current[0] = el;
+          }}
           className="min-h-screen flex items-center opacity-0"
         >
           <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
             <div className="lg:col-span-3 space-y-6 sm:space-y-8">
               <div className="space-y-3 sm:space-y-2">
-                <div className="text-sm text-muted-foreground font-mono tracking-wider">
-                  PORTFOLIO / 2025
-                </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
-                  Felix
+                  Chukwunonso
                   <br />
-                  <span className="text-muted-foreground">Macaspac</span>
+                  <span className="text-muted-foreground">Nwabueze</span>
                 </h1>
               </div>
 
               <div className="space-y-6 max-w-md">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Frontend Developer crafting digital experiences at the intersection of
-                  <span className="text-foreground"> design</span>,
-                  <span className="text-foreground"> technology</span>, and
-                  <span className="text-foreground"> user experience</span>.
+                  Software Engineer crafting
+                  <span className="text-foreground"> seamless digital experiences </span>
+                  through thoughtful <span className="text-foreground">design</span>,{" "}
+                  <span className="text-foreground">clean code</span>, and{" "}
+                  <span className="text-foreground">purposeful technology</span>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
@@ -89,7 +89,6 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     Available for work
                   </div>
-                  <div>Philippines</div>
                 </div>
               </div>
             </div>
@@ -98,16 +97,16 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Frontend Developer</div>
-                  <div className="text-muted-foreground">@ Hububble</div>
-                  <div className="text-xs text-muted-foreground">2021 — Present</div>
+                  <div className="text-foreground">Software Engineer</div>
+                  <div className="text-muted-foreground">@ Helm</div>
+                  <div className="text-xs text-muted-foreground">2025 — Present</div>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {["HubL", "React", "TypeScript", "HubSpot CMS", "Node.js"].map((skill) => (
+                  {["Nestjs", "React", "TypeScript", "Postgresql", "Redis"].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
@@ -123,47 +122,44 @@ export default function Home() {
 
         <section
           id="work"
-          ref={(el) => (sectionsRef.current[1] = el)}
-          className="min-h-screen py-20 sm:py-32 opacity-0"
+          ref={(el) => {
+            sectionsRef.current[1] = el;
+          }}
+          className="min-h-screen py-5 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2019 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2025 — present</div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
-                  year: "2023",
-                  role: "Senior Frontend Engineer",
-                  company: "Vercel",
+                  year: "2025",
+                  role: "Software Engineer",
+                  company: "Helm",
                   description:
-                    "Leading frontend architecture for developer tools and AI-powered features.",
+                    "Designed and implemented UI components that improved usability, consistency, and performance across the application.",
+
                   tech: ["React", "TypeScript", "Next.js"],
                 },
                 {
-                  year: "2022",
-                  role: "Frontend Engineer",
-                  company: "Linear",
-                  description:
-                    "Built performant interfaces for project management and team collaboration.",
-                  tech: ["React", "GraphQL", "Framer Motion"],
-                },
-                {
-                  year: "2021",
-                  role: "Full Stack Developer",
-                  company: "Stripe",
-                  description:
-                    "Developed payment infrastructure and merchant-facing dashboard features.",
-                  tech: ["Ruby", "React", "PostgreSQL"],
-                },
-                {
-                  year: "2019",
+                  year: "2023",
                   role: "Software Engineer",
-                  company: "Airbnb",
-                  description: "Created booking flow optimizations and host management tools.",
-                  tech: ["React", "Node.js", "MySQL"],
+                  company: "Myroute",
+                  description:
+                    "Led the backend team in delivering high-priority features, integrating third-party APIs, and optimizing development workflows — reducing release cycles from 2 weeks to 5 days and improving platform efficiency by 30%.",
+
+                  tech: ["Nodejs", "Socket.io", "Mongodb"],
+                },
+                {
+                  year: "2022",
+                  role: "Software Engineer",
+                  company: "Unicus ITS",
+                  description:
+                    "Enhanced platform security by implementing Firebase Authentication, eliminating unauthorized access incidents. Collaborated with frontend teams to launch new user-facing features that increased engagement by 25%.",
+                  tech: ["React", "Firebase", "TypeScript"],
                 },
               ].map((job, index) => (
                 <div
@@ -204,7 +200,9 @@ export default function Home() {
 
         <section
           id="projects"
-          ref={(el) => (sectionsRef.current[2] = el)}
+          ref={(el) => {
+            sectionsRef.current[2] = el;
+          }}
           className="min-h-screen py-10 sm:py-20 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -216,32 +214,18 @@ export default function Home() {
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
-                  title: "Design System UI Kit",
+                  title: "Skyskillhub",
                   description:
-                    "Comprehensive component library with 50+ reusable components, documentation, and Figma integration.",
-                  tech: ["React", "TypeScript", "Storybook"],
-                  link: "#",
+                    "A gamified eLearning platform designed to make coding education engaging and project-driven. Features include course progress tracking, interactive challenges, and real-time feedback.",
+                  tech: ["Next.js", "TypeScript", "MongoDB"],
+                  link: "https://skyskillhub.com/",
                 },
                 {
-                  title: "Analytics Dashboard",
+                  title: "PointNews360",
                   description:
-                    "Real-time data visualization platform for tracking user metrics and business intelligence.",
-                  tech: ["Next.js", "D3.js", "PostgreSQL"],
-                  link: "#",
-                },
-                {
-                  title: "E-commerce Platform",
-                  description:
-                    "Full-stack marketplace with payment processing, inventory management, and seller dashboard.",
-                  tech: ["React", "Node.js", "Stripe"],
-                  link: "#",
-                },
-                {
-                  title: "Content Management System",
-                  description:
-                    "Headless CMS with rich text editing, media management, and API-first architecture.",
-                  tech: ["Next.js", "GraphQL", "MongoDB"],
-                  link: "#",
+                    "A modern content publishing and blogging platform with a full-featured editor, article analytics, and optimized SEO performance.",
+                  tech: ["Next.js", "mongodb", "Redis", "Typescript"],
+                  link: "https://www.pointnews360.com/",
                 },
               ].map((project, index) => (
                 <a
@@ -292,7 +276,9 @@ export default function Home() {
 
         <section
           id="connect"
-          ref={(el) => (sectionsRef.current[3] = el)}
+          ref={(el) => {
+            sectionsRef.current[3] = el;
+          }}
           className="py-20 sm:py-32 opacity-0"
         >
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
@@ -307,10 +293,10 @@ export default function Home() {
 
                 <div className="space-y-4">
                   <Link
-                    href="mailto:test@example.com"
+                    href="mailto:nwabuezesc@gmail.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span className="text-base sm:text-lg">test@example.com</span>
+                    <span className="text-base sm:text-lg">nwabuezesc@gmail.com</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -334,10 +320,16 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { name: "GitHub", handle: "@felixmacaspac", url: "#" },
-                  { name: "v0.dev", handle: "@felixmacaspac", url: "#" },
-                  { name: "HubSpot Community", handle: "@felixmacaspac", url: "#" },
-                  { name: "LinkedIn", handle: "felixmacaspac", url: "#" },
+                  {
+                    name: "GitHub",
+                    handle: "@nwabuezenonso",
+                    url: "https://github.com/nwabuezenonso",
+                  },
+                  {
+                    name: "LinkedIn",
+                    handle: "@Chukwunonso Nwabueze",
+                    url: "https://www.linkedin.com/in/nonso-nwabueze/",
+                  },
                 ].map((social) => (
                   <Link
                     key={social.name}
@@ -392,22 +384,6 @@ export default function Home() {
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                   </svg>
                 )}
-              </button>
-
-              <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                <svg
-                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
               </button>
             </div>
           </div>
